@@ -1,0 +1,1569 @@
+
+LEVEL4 {Elwynor Technologies: Empire of the Peasants}
+
+NLVEMP {Empire Allow non-live users into Empire? YES} B
+
+EMPWIN {Empire # of credits to post at phase 10: 18000} N 1 32000
+
+TUREMK {Empire Number of turns per hour for non-live: 3} N 1 32000
+
+TURLIV {Empire Number of turns per hour for live users: 5} N 1 32000
+
+TAXEMK {Empire Default tax rate: 5} N 1 50
+
+PALEMK {Empire Default palace: 1} N 1 10
+
+COUEMK {Empire Default starting turn: 1} N 1 10
+
+MAREMK {Empire Default number of markets: 60} N 0 32000
+
+MILEMK {Empire Default number of mills: 180} N 0 32000
+
+FOUEMK {Empire Default number of foundries: 20} N 0 32000
+
+SHIEMK {Empire Default number of shipyards: 20} N 0 32000
+
+SEREMK {Empire Default number of serfs: 1697} N 1000 10000
+
+NOBEMK {Empire Default number of nobles: 2} N 0 32000
+
+SOLEMK {Empire Default number of soldiers: 20} N 0 32000
+
+GRAEMK {Empire Default bags of grain: 32000} N 5000 32000
+
+MONEMK {Empire Default of coins: 32000} N 0 32000
+
+LANEMK {Empire Default acres of land: 2500} N 1000 32000
+
+ACTTOG {Empire allow non-live to use action commands? YES} B
+
+PUBTOG {Empire allow non-live users into pub? YES} B
+
+TLKTOG {Empire allow non-live to talk in pub? YES} B
+
+ATTTOG {Empire allow non-live to attack others? YES} B
+
+ENTTOG {Empire allow non-live to own entrance message? YES} B
+
+EXITOG {Empire allow non-live to own exit message? YES} B
+
+RNKTOG {Empire allow non-live to change rank? YES} B
+
+WSPTOG {Empire allow non-live users to whisper? YES} B
+
+CHATOG {Empire allow non-live users to change tables? YES} B
+
+VALTOG {Empire automatic validation of new players? YES} B
+
+ACCTOG {Empire new players accepted into game? YES} B
+
+TRATOG {Empire allow non-live users to transfer items? NO} B
+
+MSGTOG {Empire allow non-live users to send messages? NO} B
+
+PRICE1 {Empire price of SOLDIERS: 4} L 0 2000000
+
+PRICE2 {Empire price of MARKETS: 400} L 0 2000000
+
+PRICE3 {Empire price of MILLS: 700} L 0 2000000
+
+PRICE4 {Empire price of FOUNDRIES: 1600} L 0 2000000
+
+PRICE5 {Empire price of SHIPYARDS: 1800} L 0 2000000
+
+PRICE6 {Empire price of PALACES: 5000} L 0 2000000
+
+PRICE7 {Empire price of NOBLES: 6400} L 0 2000000
+
+PRICE8 {Empire price of SPIES: 1000000} L 0 2000000
+
+GAMOP1 {Sysop} S 9 Userid of FIRST Gameop
+
+GAMOP2 {Sysop} S 9 Userid of SECOND Gameop
+
+GAMOP3 {Sysop} S 9 Userid of THIRD Gameop
+
+LEVEL6  {Elwynor Technologies: Empire of the Peasants}
+
+WELCOME {[[
+[40m[2J[2H[C[0;1;34m  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[A
+[42CÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[3H[4H[8CÚÄÄÄÄÄ[5H[8C³[33Cþ[A
+[6H[8CÃÄÄÄÄ[5CÚÄÄÄÂÄÄÄ¿   ÚÄÄÄÄÄ¿[5CÂ[7CÂÄÄÄÄ¿   ÚÄÄÄÄ¿[7H[8C³[A
+[9C[9C³   ³   ³   ³[5C³[5C³[7C³[8CÃÄÄÄÄÙ[8H[8CÀÄÄÄÄÄ    Ù[7CÀ [A
+[28C  ³ÄÄÄÄÄÙ    ÄÁÄ[6C³[8CÀÄÄÄÄ[9H[30C³[10H ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ[A
+[19CÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ [D[11H[23C[A
+[23C[0;31mÚÄÄÄ[16C³[12H[23C³[13C³[5C³[13H[13CÚÄÄÄÄÄ¿   ÃÄÄ[A
+[26C[9CÄÄÅÄÄ   ÃÄÄÄ¿   ÚÄÄÄÄ¿[14H[13C³[5C³   ³[13C³[5C³   ³   ÃÄ[A
+[53CÄÄÄÙ[15H[13CÀÄÄÄÄÄÙ   õ[13CÁ[5CÙ   Á   ÀÄÄÄÄ[16H   [35mÚÄÄ[A
+[6CÄÄÄ¿[17H   ³[5C³[48C³[18H   ³ÄÄÄÄÄÙ  ÚÄÄÄÄ¿    ÄÄÄÄ¿   ÚÄÄÄÄ[A
+[35C[5CÄÄÄÄ¿   ÂÄÄÄÄ¿  ÄÄÅÄÄ   ÚÄÄÄÄ[19H   ³[8CÃÄÄÄÄÙ   ÚÄÄÄÄ´   ÀÄ[A
+[32CÄÄÄ¿   ÚÄÄÄÄ´   ³    ³    ³[5CÀÄÄÄÄ¿[20H   ³[8CÀÄÄÄÄ    ÀÄÄÄÄÀ [A
+[28C  ÄÄÄÄÄÙ   ÀÄÄÄÄÀ   Ù    õ    Á[5CÄÄÄÄÄÙ[21H[22H[23C[37mCop[A
+[25Cyright 2024 Elwynor Technologies[23H[30CAll Rights Reserved[24H[A
+[25H[0m[25D|][[|             Empire of the Peasants
+      Copyright 2024 Elwynor Technologies
+                 Version 02.03
+
+          Checking for your Carcass, %s!
+]
+} T Empire Logon msg into game
+
+
+WELBACK {
+Glad to see you survived last years harvest,
+[[[36m|]%s[[[0;1;32m|].
+
+} T Empire Welcoming player back to game
+
+
+MAINSHT {[[[0;31m|]
+Empire (C,N,T,Y,O,P,M,Q or [[[0;1;5m|]? [[[0;31m|]for menu)[[[0;1;37m|]} T Empire Main menu short form
+
+
+MAIN {
+          [[[0;1;33;41m|] Empire Master Selections [[[0;1;0m|]
+           [[[36m|]========================
+       ====                        ====
+       =      [[[32m|][C~]ontinue Quest        [[[36m|]=
+       =      [[[32m|][N~]ews of the land      [[[36m|]=
+       =      [32;32m[T~]ax rate adjustment   [[[36m|]=
+       =      [[[32m|][Y~]our Status           [[[36m|]=
+       =      [[[32m|][O~]ther Players         [[[36m|]=
+       =      [[[32m|][P~]ub (Talk it up!)     [[[36m|]=
+       =      [[[32m|][M~]essage Center        [[[36m|]=
+       =      [[[32m|][Q~]uit (Wimp out)       [[[36m|]=
+       =      [[[32m|][?~] Redisplays Menu     [[[36m|]=
+       ================================
+
+   Type HELP for a full list of HELP topics!
+
+[[[31m|]Empire (C,N,T,Y,O,P,M,Q or [[[0;1;5m|]? [[[0;31m|]for menu)[[[0;1;37m|]} T Empire main menu
+
+
+NEW {
+[[[0;1;33m|]
+Welcome to Empire, [[[35m|]%s[[[33m|]! I will give you a
+few items to get you started on your journey,
+but, the rest is up to you! Only the strong
+survive in this barren land. Watch your back -
+and trust no scroundral!!
+
+[[[0;1;37m|]} T Empire New player entering empire
+
+
+NEWEMP {[[[0;1;32m|]
+***
+A new empire is waiting for you in Empire of the Peasants, %s!
+[[[0;1;37m|]} T Empire Logon message for new players
+
+
+TAXPMPT {[[[0;1;32m|]
+Your current tax rate is at [[[36m|]%d [[[32m|]percent.
+
+Enter a new tax rate (1-50)[[[0;1;37m|]} T Empire New tax rate
+
+
+BADTAX {[[[0;1;33m|]
+The tax rate you entered is out of
+range. Your serfs would die too quickly, SIR![[[37m|]
+} T Empire Entered tax rate out of range
+
+
+TAXSET {[[[0;1;35m|]
+OK, SIR! You have a new tax rate on
+your serfs in effect!
+[[[0;1;37m|]} T Empire New tax selected
+
+
+STATUS {[[[0;1;33m|]
+
+Status for %s [[[32m|]%s[40;33m:
+
+Land........ %s [[[36m|]acres[[[33m|]
+Money....... %s [[[36m|]coins[[[33m|]
+Grain....... %s [[[36m|]bags[[[33m|]
+Tax Rate.... %d [[[36m|]percent[[[33m|]
+Serfs....... %s} T Empire End of status screen one
+
+
+STATUS2 {
+Soldiers.... %s
+Nobles...... %s
+
+Palace...... %d [[[36m|]percent[[[33m|]
+Markets..... %s
+Mills....... %s} T Empire End of status screen two
+
+
+STATUS3 {
+Foundries... %s
+Shipyards... %s
+Spies....... %d
+Turns....... %d
+[[[0;1;37m|]
+} T Empire End of status screen three
+
+
+CONT {[[[0;1;33m|]
+
+May your land prosper this year! Your
+serfs produced [[[35m|]%s [[[33m|]bags of grain for you!
+
+Would you like to buy or sell any land or grain (Y/n)[[[0;1;37m|]} T Empire buy/sell?
+
+
+BSMENU {[[[1;36m|]
+You have [[[32m|]%s[[[36m|] Coins available which will
+purchase a total of [[[32m|]%s[[[36m|] acres. [[[32m|]%s[[[36m|] bags of
+grain are available and you can afford
+[[[32m|]%s[[[36m|] more bags.
+[[[35m|]
+1 [[[33m|]=> Buy LAND
+[[[35m|]2 [[[33m|]=> Sell LAND
+[[[35m|]3 [[[33m|]=> Buy GRAIN
+[[[35m|]4 [[[33m|]=> Sell GRAIN
+[[[35m|]C [[[33m|]=> Continue
+
+[[[36m|]Buy/Sell Option[[[37m|]} T Empire buy/sell land.grain menu
+
+
+NUMSELL {[[[0;1;33m|]
+How many of your [[[36m|]%s [[[33m|]acres would
+you like to sell at 20 coins per acre[[[0;1;37m|]} T Empire How many acres to be sold?
+
+
+NUMLA {[[[0;1;33m|]
+You have [[[36m|]%s [[[33m|]coins available.
+
+How many acres would you like
+to purchase at 75 coins each (Can afford %s)[[[0;1;37m|]} T Empire How many acres?
+
+
+BADNUM {[[[0;31m|]
+That number of acres is simply not acceptable! You can not
+purchase more than 1,000,000 acres, or sell more than 2,000,000
+acres in a single transaction.
+} T Empire Bad number of acres
+
+
+BADG {[[[0;31m|]
+That number of bags is simply not acceptable! You can not sell
+more than 1.5 billion grain, or purchase more than 2,000,000 bushels
+in a single transaction.
+} T Empire Bad number of bags of grain
+
+
+LASOLD {[[[0;1;33m|]
+OK. You have been credited [[[36m|]%s [[[33m|]coins for
+your [[[36m|]%s [[[33m|]acres of land sold.
+[[[0;1;37m|]} T Empire Land sold on market
+
+
+LABUY {[[[0;1;33m|]
+OK. Your total purchase value is [[[36m|]%s [[[33m|]coins
+([[[36m|]%s [[[33m|]acres at 100 coins per acre).
+[[[0;1;37m|]} T Empire Bought land
+
+
+GASOLD {[[[0;1;33m|]
+OK. You have been credited [[[36m|]%s [[[33m|]coins for
+your [[[36m|]%s [[[33m|]bags of grain sold.
+[[[0;1;37m|]} T Empire Grain sold on market
+
+
+GABUY {[[[0;1;33m|]
+You have [[[36m|]%s [[[33m|]coins available. How many
+bags of grain would you like to purchase
+at 12 coins per bag (Can afford %s)[[[37m|]} T Empire Buy how many bags of grain?
+
+
+GABOUT {[[[0;1;33m|]
+OK. Your total purchase value is [[[36m|]%s [[[33m|]coins
+([[[36m|]%s [[[33m|]bags at 16 coins per bag).
+[[[37m|]} T Empire Purchase msg for grain
+
+
+GRANUM {[[[0;1;33m|]
+You have [[[36m|]%s [[[33m|]bags of grain available. How many bags
+(at 1 coins each) would you like to part with[[[37m|]} T Empire How many bags to sell?
+
+
+GASERFS {[[[0;1;33m|]
+Your serfs require [[[36m|]%s [[[33m|]bags of grain.
+Give them how many ([[[31m|]ENTER[[[37m|]=[[[35m|]%s[[[33m|])[[[32m|]} T Empire Give serfs how much grain
+
+
+GASOLDI {[[[0;1;33m|]
+Your soldiers require [[[36m|]%s [[[33m|]bags of grain.
+Give them how many ([[[31m|]ENTER[[[37m|]=[[[35m|]%s[[[33m|])[[[32m|]} T Empire Give soldiers how much grain
+
+
+STARVED {[[[0;1;31m|]
+Your army has starved SIR! You will not be
+able to do any fighting this turn! [[[0;1;37m|]
+
+} T Empire Army starved
+
+
+DONE {[[[0;1;32m|]
+OK, SIR! The grain you requested be moved
+has been distributed![[[37m|]
+} T Empire Grain distributed to soldiers or serfs
+
+
+MARKET {[[[0;1;37m|]
+[[[35m|]Welcome to the Empire thrift shop...
+
+[[[36m|]+++++++++++++++++++++++
+[[[36m|]+[[[7m|]  Empire Market INC  [[[0;1;36m|]+
++++++++++++++++++++++++++++++++++++++++
++[35;32;41m  Investment   Coins+    Can afford  [[[0;1;36;40m|]+
++++++++++++++++++++++++++++++++++++++++
+[[[33m|]   Soldiers      %s  %s
+   Markets       %s  %s        } T Empire Market menu part 1
+
+
+MARKET2 {
+   Mills         %s  %s
+   Foundries     %s  %s        } T Empire Market menu part 1
+
+
+MARKET3 {
+   Shipyards     %s  %s
+   Palaces       %s  %s        } T Empire Market menu part 3
+
+
+MARKET4 {
+   Nobles        %s  %s
+   Spies         %s  %s        } T Empire Market Menu part 4
+
+
+MARKET5 {
+[[[36m|]+++++++++++++++++++++++++++++++++++++++
+[[[32m|] Enter HELP PURCHASE for purchase info
+
+[[[33m|]Command or (C)ontinue [[[[31m|]Coins[[[33m|]=[[[35m|]%s[[[33m|]~][[[32m|]} T Empire Market menu part 3
+
+
+SHRTMAR {
+[[[0;1;33m|]Command or (C)ontinue [[[[31m|]Coins[[[33m|]=[[[35m|]%s[[[33m|]~][[[32m|]} T Empire Short market menu
+
+
+WONT {[[[0;1;36m|]
+You can only buy up to 250,000
+of an item in a single purchase!
+} T Empire Won't sell more than 250,000 at once
+
+
+MMAR {[[[0;1;36m|]
+You must keep a ratio of one market to
+every three mills you own. A quick purchase of
+more markets is in order, SIR!
+} T Empire Must have one market for every 3 mills
+
+
+MMLAND {[[[0;1;36m|]
+You must keep a ratio of one markets to
+every one acre of land you own. A quick purchase
+of more land is in order, SIR!
+} T Empire Must have one acre for every market
+
+
+BADITEM {[[[0;1;36m|]
+The product you would like to purchase
+is currently out of stock - try on a later date!
+} T Empire Item doesn't exist
+
+
+BROKE {[[[0;1;35m|]
+Sorry, you need [[[31m|]%s [[[35m|]coins to make your
+purchase and you only have [[[31m|]%s[[[35m|].
+} T Empire Can't afford to buy
+
+
+COST {[[[0;1;33m|]
+OK. You purchased a total of [[[36m|]%s [[[33m|]coins
+worth of merchantize (at [[[32m|]%s [[[33m|]each).
+} T Empire Purchase sucessful
+
+
+REJECT {
+
+[[[0;31m|]Sorry only "[[[1;35;5m|]LIVE[[[0;31m|]" users can play empire.  See main
+menu option '[[[36m|]I5[[[31m|]' for how to become a "LIVE" user on this system.
+[[[0;1;37m|]} T Empire Rejecting non-live users
+
+
+LATER {[33m
+
+[[[0;1;5;33m|]Thank you[[[0;35m|] for playing Empire!
+
+[[[0;1;37m|]} T Empire Exit message for Empire
+
+
+EMPLOG {[[[0;1;36m|]
+Your EMPIRE awaits you! Don't let your serfs starve![[[0;1;37m|]
+
+} T Empire Logon msg
+
+
+ENTER {
+[[[0;1;33m|]Slam your <<< [[[35m|]ENTER [[[0;1;33m|]>>> Key[[[37m|]} T Empire Press enter
+
+
+XNOBLES {[[[0;1;32m|]
+You can only own (20) soldiers per
+(1) noble in your army. You need to purchase
+more nobles if you desire more soldiers.
+[[[37m|]} T Empire Need to buy more nobles to get soldiers
+
+
+MAXPAL {[[[0;1;32m|]
+You may only own 100% (10 shares) of palace at
+one time. You can purchase nobles seperatly if
+desired at this time.
+[[[37m|]} T Empire Only 100 percent of palace allowed
+
+
+BADSPY {[[[0;1;32m|]
+You may only own a maximum of 10 spies at
+any one time! Try again...
+[[[37m|]} T Empire Can only own 10 spies
+
+
+EMPLAND {
+[[[0;1;37;41m|]       Empire Rulers Status       [[[0;1;33;40m|]
+******************************************
+[[[36m|]     Ruler              Phase  Land
+[[[33m|]******************************************
+[[[32m|]} T Empire land sizes
+
+
+MAYBE {
+[[[0;1;33m|]**********************************
+[[[0;1;30;47m|]   Empire of the Peasants [[[0;1;37m|]
+} T Empire Copyright msg
+
+
+TDYNEWS {
+[[[0;1;33m|]Ye' Grand Empire news for the fine day of [[[31m|]%s[[[33m|]:
+
+[[[36m|]} T Empire News of the land
+
+
+ENDNEWS {
+[[[33m|]Thats all for today!
+} T Empire End of news of the land
+
+
+ATTMENU {
+[[[0;1;35m|]May your forces be victorious!
+
+[[[33m|]You have [[[36m|]%s [[[33m|]nobles, [[[36m|]%s[[[33m|] soldiers, and
+[[[36m|]%d[[[33m|] spies ready for battle!
+
+[[[32m|]Player to attack, C to continue or ? for list[[[37m|]} T Empire enter id to attack
+
+
+STATS {
+[[[0;1;36mYour resources produced the following
+for you this turn:
+
+[37m|]Markets....  %s [[[32m|]coins
+[[[37m|]Mills......  %s [[[32m|]bags of grain
+[[[37m|]Foundries..  %s [[[32m|]coins
+[[[37m|]Shipyards..  %s [[[32m|]coins
+
+[[[33m|]Your loyal serfs paid taxes at [[[35m|]%d [[[33m|]percent!
+
+[[[31m|]Would you like to play another turn (Y/n)[[[37m|]} T Empire Stats for a turn
+
+
+NEXT {
+[[[0;1;33m|]Glad to see you're looking out for your
+empire, [[[36m|]%s[[[33m|]! There is alot to do, so,
+waste no time getting started!
+
+[[[37m|]} T Empire Next turn entrance screen
+
+
+BATTLE {
+[[[0;31m|]OK. You are now entering battle
+with [[[35m|]%s[[[31m|]. Your opponent has:
+
+[[[0;1;33m|]%s [[[36m|]soldiers
+[[[33m|]%s [[[36m|]nobles
+[[[33m|]%d [[[36m|]percent palace
+
+[[[0;31m|]Battle command ([[[5;1;37m|]? [[[0;31m|]for help)[[[0;1;37m|]} T Empire battle menu
+
+
+SHRTBAT {
+[[[0;31m|]Battle command ([[[5;1;37m|]? [[[0;31m|]for help)[[[0;1;37m|]} T Empire Short empire battle menu
+
+
+NOSPY {
+Sorry, you must have atleast ONE spy in order
+to use this option, SIR!
+} T Empire user doesn't own spy
+
+
+SPYRPT {
+Your Spy gathered the following information:} T Empire spy report
+
+
+FAILSP {
+Your spy FAILED to gather any
+information about your opponent, SIR! (Better
+luck next time!)
+} T Empire spy failed to gain information
+
+
+BATHELP {
+[[[0;1;33m|]You have chosen to go to battle with
+[[[36m|]%s[[[33m|]. While in battle mode you have the
+following options:
+
+[[[32m|]ATTACK  - Go ahead with a full scale attack
+RETREAT - Run from battle (May take casualties)
+CONQUER - Attempt to destroy some of opponents palace
+SPY     - Attempt to gain information about your opponent
+
+[[[0;31m|]Battle commands can be abbreviated for ease of use.
+[[[0;1;37m|]} T Empire Help for battle mode
+
+
+BADUSER {
+[[[0;1;35m|]%s [[[31m|]is not in the empire records.
+Perhaps you have had too much to drink?
+[[[37m|]} T Empire User entered as opponent doesn't exist
+
+
+HURT {
+[[[0;1;32m|]You were defeated while trying to
+retreat. Luckily, you only lost
+all your soldiers!
+
+[[[36m|](You could have lost your head!)
+
+[[[37m|]} T Empire Defeated while trying to retreat
+
+
+NOTHURT {
+[[[0;1;32m|]'HA! HA! HA!' you yell at your
+opponent as you make your get-away unharmed!
+
+[[[0;1;37m|]} T Empire Retreated without damage
+
+
+SUCC {
+[[[0;1;32m|]You managed to destroy 10 percent of
+your opponents palace with a loss of
+[[[33m|]%d [[[32m|]soldiers.
+[[[0;1;37m|]} T Empire destroyed some of opponents palace
+
+
+EPFAILED {
+[[[0;31m|]You failed at your attempt to conquer
+your opponents palace. Your opponent is
+obviously stronger! Better luck next time!
+[[[0;1;37m|]} T Empire Failed while trying to attack palace
+
+
+WON {
+[[[0;33;1;44m|] CONGRATULATIONS, SIR! [[[0;1;32m|]
+
+You defeated your opponent! Your opponent
+has been reduced to no soldiers (We decided
+to make a total fool out of him!). You suffered
+some casualties. Some serfs from your opponents
+empire have decided to join your army!
+[[[37m|]} T Empire Player defeated opponent
+
+
+LOST {
+[[[0;35m|]ARRRRRRRRRRGGGGGHHHHHHHHH!!!
+
+[[[31m|]You were defeated! You have suffered heavy
+casualties as a result of your stupidity!
+
+Maybe next time you will learn how to
+defeat such a simple opponent!
+[[[0;1;37m|]} T Empire Player defeated by opponent
+
+
+CANTCON {
+[[[0;1;32m|]You can't attack an opponents palace who
+has less then 30% of the palace remaining!
+[[[37m|]} T Empire Can't attack palace w/ only 30% palace left
+
+
+IDIOT {
+[[[0;1;33m|]Why would you want to attack
+yourself? You need a vacation!
+[[[37m|]} T Empire Tried to attempt self
+
+
+NOFIGHT {
+[[[0;1;32m|]OK. No fighting this year (Keep this up and
+your soldiers may just stay with you!).
+[[[37m|]} T Empire No fighting for the turn
+
+
+SACKED {
+[[[0;31m|]Your serfs are not pleased you have
+not given them all the grain they require.
+
+[[[0;1;35m|]***
+Your serfs have ransacked your empire!
+(You'll be lucky to escape with your head)
+[[[0;1;37m|]} T Empire Serfs ransacked empire
+
+
+KILLED {
+[[[0;1;35m|]***
+[[[33m|]You killed [[[36m|]%s[[[33m|]! May that warrior
+rest in peace.
+[[[37m|]} T Empire Killed opponent
+
+
+BUSY {
+[[[0;1;35m|]***
+[[[32m|]The player you're attemping to engage in battle
+with is unavailable at the moment. Try again in
+a few moments.
+[[[37m|]} T Empire Player being attacked is in "non-interrupt" state
+
+
+UNDATT {
+[[[0;1;35m|]***
+[[[0;5;31m|]WARNING[[[0;31m|]: [[[0;1;33m|]You are under attack by [[[36m|]%s[[[33m|]. Within a
+few moments, your status may change. You may wish
+to exit the game at this time.
+[[[0;1;37m|]} T Empire Opponent being notified he is under seige
+
+
+GONE {
+[[[0;1;35m|]***
+[[[0;31m|]You were killed in battle. Better luck
+next time!
+[[[0;1;37m|]} T Empire Player killed in battle (online when killed)
+
+
+UPD {
+[[[0;1;35m|]***
+[[[0;1;32m|]UPDATE: [[[36m|]%s [[[33m|]%s[[[32m|].
+[[[0;1;37m|]
+} T Empire Notify opponent of status of battle
+
+
+DEAD {
+[[[0;31m|]You are unable to continue running
+your empire due to bad management. You
+must maintain atleast 500 acres, 1000 serfs, and
+keep your finances under control in order to be a ruler!
+[[[37m|]} T Empire Player dropped below 500 acres
+
+
+SKIPPED {
+[[[0;1;35m|]No fighting allowed this turn!
+[[[37m|]} T Empire No fighting allowed for the turn
+
+
+WHO {
+[[[0;1;36m|]These rulers have graced you with
+their presence:[[[33m|]%s[[[1;37m|]
+} T Empire Rulers in the pub
+
+
+PUBENT {
+[[[0;1;32m|]***
+Welcome to Ye' Local pub. It's been
+said all the important rulers of the
+land have been known to drop by.
+[[[0;1;37m|]} T Empire user entered pub
+
+
+ENTERED {
+[[[0;1;35m|]***
+[[[0;1;33m|]%s [[[36m|]%s [[[33m|]just skipped into the room and sat down!
+[[[0;1;37m|]} T Empire user entered the pub
+
+
+LEFT {
+[[[0;1;35m|]***
+[[[0;1;33m|]%s [[[0;1;36m|]%s [[[33m|]stood up from the bar and walked out!
+[[[0;1;37m|]} T Empire user left pub
+
+
+BYE {
+[[[0;1;35m|]OK. Returning back to reality...
+} T Empire returning user back to main game menu
+
+
+FROM {
+[[[0;1;33m|]From %s %s: [[[36m|]%s
+[[[0;1;37m|]} T Empire message sent by user in pub
+
+
+SENT {[[[32m|]-- Ye' Messenger Sent --
+[[[1;37m|]} T Empire message sent to all in pub
+
+
+HUNGUP {
+[[[0;1;35m|]***
+[[[33m|]%s [[[36m|]%s [[[33m|]just got snatched up by the barmaid!
+[[[0;1;37m|]} T Empire User hungup
+
+
+OUTTURN {
+[[[0;1;35m|]Sorry, due to popular demand you can only play (%d)
+times per hour. You will need to call back in order
+to play more. Thank you for your understanding!
+[[[1;37m|]} T Empire Can only play (n) times per call
+
+
+ALATT {
+[[[0;1;32m|]You can not attack that player again this
+call! Try another one of our fine rulers!
+[[[0;1;37m|]} T Empire Cant attack ruler twice on same call
+
+
+ENTMSG {
+[[[0;1;35m|]***
+[[[33m|]%s
+[[[0;1;37m|]} T Empire msg entrance msg for pub
+
+
+EXIMSG {
+[[[0;1;35m|]***
+[[[33m|]%s
+[[[0;1;37m|]} T Empire msg exit msg for pub
+
+
+NOT {
+[[[0;1;36m|]%s[[[33m|] does not have an empire entrance/exit. One
+will be created for you. You may enter 'X' to abort this process.
+} T Empire User doesn't have a pub ent/exit record
+
+
+CURRENT {
+The entrance/exit messages for [[[0;1;36m|]%s [[[33m|]
+are as follows:
+
+Entrance message:
+%s
+Exit message:
+%s
+} T Empire Displaying current ent/exit messages for user
+
+
+ENTIN {
+ Enter a new entrance message (Max 73 characters)
+ Enter "none" to clear out entrance message, or 'X' to abort.
+
+ Start                                                                  End
+|-------------------------------------------------------------------------|
+} T Empire Entering new entrance message
+
+
+EXIOUT {
+ Enter a new exit message (Max 73 characters)
+ Enter "none" to clear out exit message, or 'X' to abort.
+
+ Start                                                                  End
+|-------------------------------------------------------------------------|
+} T Empire Entering new exit message
+
+
+BADOP {
+The editor option '%s' you entered is invalid.
+} T Empire Help for edit command
+
+
+SYSLEFT {
+[[[0;1;36m|]%s[[[33m|] just disappeared underneath a table!
+[[[1;37m|]} T Empire Sysop entering editor
+
+
+REJOINED {
+[[[0;1;36m|]%s[[[33m|] has just emerged from under a pub table!
+[[[1;37m|]} T Empire Sysop rejoining pub from editor
+
+
+UPDATED {
+The record has been modified!
+} T Empire User record updated for pub ent/exit
+
+
+OKRESET {
+OK. The user has been granted extra turns
+for this online session.
+} T Empire User granted extra turns by sysop
+
+
+ACTOUT {***
+%s %s
+} T Empire Action command for pub sent to all
+
+
+EPOUT {***
+%s
+} T Empire Action command sent to originator of command
+
+
+NOACT {
+The action word entered does not exist in the
+pub action word database. Adding word to database. You
+can enter 'X' to abort this process.
+} T Empire Action word not in database
+
+
+CURACT {
+%s already exists in the database. Update mode
+is being forced. You may enter "X" to abort this process.
+
+Owner: %s
+Message sent to original user:
+%s
+Message sent to all other users:
+%s
+} T Empire Word already exists. Update mode
+
+
+ENTOWNER {
+  Enter the userid for the user to control the action command
+  (Max 9 characters)  Enter "all" if anyone can use the command
+
+ Start
+|---------|
+} T Empire Enter a new action msg owner
+
+
+ENTORIG {
+ Enter a new message for command executer to view (Max 73 characters)
+ Enter "none" to clear out message, or 'X' to abort.
+
+ Start                                                                  End
+|-------------------------------------------------------------------------|
+} T Empire Enter a new action msg originator message
+
+
+ENTALL {
+ Enter a new action message for all users to view (Max 73 characters)
+ Enter "none" to clear out message, or 'X' to abort.
+
+ Start                                                                  End
+|-------------------------------------------------------------------------|
+} T Empire Enter a new action msg to all message
+
+
+BADACT {
+The editor option '%s' you entered is invalid.
+} T Empire Help for change command
+
+
+NOTLK {
+Sorry, unfortunately you must be a LIVE user to talk
+in the pub. Check the INFORMATION CENTER for further details.
+} T Empire Non-live users can't talk
+
+
+NOTPUB {
+'%s' is not in the pub!
+} T Empire User not in pub for whisper
+
+
+WHISSENT {-- Whisper sent --
+} T Empire Whisper sent to user
+
+
+NOWHIS {
+Sorry, unfortunately you must be a LIVE user to use the whisper
+option in the pub. Check the INFORMATION CENTER for futher details.
+} T Empire Non-live users can't whisper
+
+
+NOPUB {
+Sorry, unfortunately only LIVE users are allowed in the pub. Check
+the INFORMATION CENTER for further details.
+} T Empire Non-live user not allowed in pub
+
+
+NOATT {
+No attacking this turn (You must have credits).
+} T Empire User must have credits to attack
+
+
+NOTABLE {
+Hey buddy.. that table is reserved for the next 10
+years.... Get outta here!
+} T Empire Table # entered is invalid
+
+
+NOCHA {
+Scram! That table is reserved for our regulars and you're
+not one of them!
+} T Empire Non-live tried to goto channel above one
+
+
+RAN {
+%s just stood up and moved to another table (maybe you should
+try wearing purfume more often!)
+} T Empire User left current channel to move to another
+
+
+ETRD {
+%s just moved to this table and sat down.
+} T Empire Entrance msg for all when a user changes table
+
+
+MOVED {
+OK! You walk over to a new table and sit down...
+} T Empire User moved to another table
+
+
+SYSMENU {<<< Empire of the Peasants SYSOP Sub-menu >>>
+
+1 ==> ACTTOG is (%s)  (Non-live users allowed to use action commands?)
+2 ==> TLKTOG is (%s)  (Non-live users allowed to talk in pub?)
+3 ==> ATTTOG is (%s)  (Non-live users allowed to attack others?)
+4 ==> ENTTOG is (%s)  (Non-live users custom entrance msg displayed?)
+5 ==> EXITOG is (%s)  (Non-live users custom exit msg displayed?)
+6 ==> RNKTOG is (%s)  (Non-live users can change ranks?)
+7 ==> WSPTOG is (%s)  (Non-live users allowed to whisper?)
+8 ==> CHATOG is (%s)  (Non-live users allowed to change tables?)
+9 ==> PUBTOG is (%s)  (Non-live users allowed in pub?)
+0 ==> NLVEMP is (%s)  (Non-live users allowed to play empire?)
+X ==> Exit to game
+
+Please select one of the following options (1,2,3,4,5,6,7,8,9,0 or X)} T Empire Sysop menu
+
+
+HELP {***
+Empire of the Peasants Help Display:
+
+Command                 Description
+--------                -----------
+scan or /s              list of who is in the Pub
+/<user-id> <message>    whisper a message to another user
+table <number>          move to another table in Pub (1,2,3,etc...)
+list or /a              display a list of action commands
+
+} T Empire Help display listing
+
+
+NOWORDS {
+No action words exist.
+} T Empire No words exist in pubact file
+
+
+WORDS {
+The following action words are available:
+=========================================
+} T Empire List of action words available
+
+
+DELETED {
+The action word has been deleted, CIRE!
+} T Empire Action word deleted
+
+
+NOTDEL {
+%s was not located and thus was not deleted, CIRE!
+} T Empire Action word not found to delete
+
+
+BAR01 {
+***
+The barmaid just came over to take your order, 'anything mac?'.
+} T Empire Pub auto message 01
+
+
+BAR02 {
+***
+The barmaid just dropped a tab on the table. 'pay up or leave, bub'.
+} T Empire Pub auto message 02
+
+
+BAR03 {
+***
+The barmaid just brought you a tall cold one.
+} T Empire Pub auto message 03
+
+
+BAR04 {
+***
+The barmaid is making eyes at you!
+} T Empire Pub auto message 04
+
+
+BAR05 {
+***
+The barmaid just bought a round on the house!
+} T Empire Pub auto message 05
+
+
+BAR06 {
+***
+The barmaid is trying to get your attention. <psssssstttt>
+} T Empire Pub auto message 06
+
+
+BAR07 {
+***
+Suddenly you notice a cold chill in the air...
+} T Empire Pub auto message 07
+
+
+BAR08 {
+***
+The barmaid just winked at you!
+} T Empire Pub auto message 08
+
+
+BAR09 {
+***
+A wonderful aroma of beef stew fills the pub...  <lets feast!>
+} T Empire Pub auto message 09
+
+
+BAR10 {
+***
+The barmaid is trying to tickle you!
+} T Empire Pub auto message 10
+
+
+LOSTBAR {
+***
+A beautiful Wench just came over and sat down next to you!!!
+} T Empire Pub default auto msg
+
+BEHEADED {
+***
+%s just blew away!
+} T Empire User Beheaded with Sysop function
+
+
+MSERF {[[[0;1;35m|]
+Your serfs can only harvest ten acres each, SIR! You
+own %s serfs and only have %s acres. Try purchasing land
+in a smaller quantity next season!
+} T Empire Player tried to buy more land than serfs can support
+
+
+OUTRNG {
+You cannot attack a ruler that is less than HALF your
+size in acres! Quit playin' rough with the little guys!
+} T Empire Player can't be a bully anymore
+
+
+UNVAL {
+Welcome to Empire of the Peasants, %s.
+
+Unfortunatly, the Sysop has decided not to allow
+you to play Empire of the Peasants until he has
+had a chance to look over your information.
+
+Please try back at a later time to check if
+your player account has been validated.
+
+} T Empire Player waiting for validation
+
+
+NOTACC {
+
+Sorry, unfortunatly the Sysop has decided not
+to accept new players into Empire of the Peasants. For
+more information, please E-Mail your Sysop.
+
+} T Empire not accepting new players
+
+
+STILLNO {
+
+Sorry, unfortunatly the Sysop has not had a chance to
+validate your player account as of now. Please try
+back at a later time, or try E-Mail.
+
+} T Empire unvalidated user tried to enter
+
+
+UPDD {
+The player information for %s has been updated.
+} T Empire Sysop validated a user
+
+
+MILLSAK {
+Your serfs are not happy that you have been
+over populating them on such a small stretch
+of land! As a result of a lack of acres (one
+acre per two serfs), you lost %s mills.
+} T Empire Serfs ransacked mills for lack of land
+
+
+HLP01 {[[[35m|]
+GENERAL INFORMATION
+[[[1;37m|]
+Empire of the Peasants - EOP for short - is a game of economics and
+war. EOP allows users to build up their own personal kingdom,
+protect themselves from their foes, and to attack other unsuspecting
+rulers in the game.
+
+If you don't grow as quickly as other players you may find yourself
+starting over from scratch. Type [[[33m|]HELP GROWTH[[[37m|] for information on how to
+build up your Empire.
+} T Empire Help #1: General
+
+
+HLP02 {[[[35m|]
+RANKS
+[[[1;37m|]
+In Empire of the Peasants (EOP) rank is calculated by the extent
+of your growth. The more land, markets, mills, etc. you own, the
+better chances you have of being promoted to the next rank. Study
+the following chart to learn the exact amounts required for a rank:
+
+[[[36m|]---------------------------------------------------------------
+~| Rank    ~|  Land       ~| Nobles ~| Markets ~| Mills    ~| Turns ~|
+---------------------------------------------------------------
+~| Peasant ~|   *******   ~|   ***  ~|  ****   ~|    ****  ~| ****  ~|
+~| Master  ~|     3,500   ~|    15  ~|    15   ~|      20  ~|   20  ~|
+~| Duke    ~|    15,000   ~|    60  ~|    60   ~|      75  ~|   50  ~|
+~| Lord    ~|   100,000   ~|  1500  ~|  2200   ~|    3500  ~|  100  ~|
+~| King    ~| 2,000,000   ~|   50k  ~|   50k   ~|     75k  ~|  200  ~|
+~| Emperor ~| 7,500,000   ~|  100k  ~|  100k   ~|     75k  ~|  350  ~|
+---------------------------------------------------------------
+[[[37m|]
+Type [[[33m|]HELP TURNS[[[37m|] for more information on turn completion requirements
+} T Empire Help #2: Ranks
+
+
+HLP03 {[[[35m|]
+STRATEGY
+[[[1;37m|]
+To get ahead in Empire of the Peasants (EOP) you must keep on top
+of the situation. Buying markets and mills will give you an edge
+over other players. Certain "ratios" must be met before markets and
+mills can be purchased; so pay close attention!
+
+Be sure to get as many acres as possible. Don't try to grow TOO quickly,
+however, or your serfs may become too much to handle. You can only own
+two serfs per acre, so, be sure to pay close attention to the needs
+of your serfs!
+
+If you end up with a few extra dollars at the end of a turn: spend them
+on defense. You never know when someone may attack you!
+
+Try to weaken your opponents palace before going through with a full
+fledged assult. More of your men may survive!
+} T Empire Help #3: Strategy
+
+
+HLP04 {} T Empire Help #4: Removed
+
+HLP05 {[[[35m|]
+NEWS
+[[[1;37m|]
+Empire of the Peasants' (EOP) news offers information on recent (daily)
+events within EOP. Such news may include information on battles
+that occured, or new EOP players. EOP news is displayed for the
+current day ONLY.
+
+While reading news, a (C)ontinue, (N)onstop, (Q)uit: message will appear
+at the end of every page. Selecting (C)ontinue will cause EOP to display
+another page of news (if any remains). Selecting (N)onstop will disable
+the page pause function. The (Q)uit option will return you back to the
+EOP main menu.
+} T Empire Help #5: News
+
+
+HLP06 {[[[35m|]
+TAXES
+[[[1;37m|]
+Taxes have an effect on the way Empire of the Peasants (EOP) operates
+turn by turn. The higher the tax rate (50% is the highest, 1% is the
+lowest) the less grain and money you will make each turn from your
+peasants. On the other hand, a high tax rate will cause alot more
+income to be earned per turn, but less grain.
+
+In the beginning you should probably keep your tax rate as low as
+possible so you make more grain per turn. If grain becomes less of
+a problem then increase taxes.
+} T Empire Help #6: Taxes
+
+
+HLP07 {[[[35m|]
+OTHERS
+[[[1;37m|]
+Empire of the Peasants (EOP) supports an unlimited number of players
+to be playing at one time. While online, you can talk with other
+players by entering the PUB. Type [[[33m|]HELP PUB[[[37m|] for more information.
+
+If you choose to attack another player: be careful! If the player
+you're attacking is online at the time you initiate war, that player
+will be notified (if he/she is inside EOP). For more information
+on battle, type [[[33m|]HELP BATTLE[[[37m|].
+
+Only players who have been validated will appear in the "O"ther
+players listing. Until the SYSOP has validated these users (if validation
+is required), then these players will be OFF LIMITS.
+} T Empire Help #7: Others
+
+
+HLP08 {[[[35m|]
+PUB
+[[[1;37m|]
+The PUB is a place inside Empire of the Peasants (EOP) where
+users can talk to one another. While inside the PUB, users can
+talk around one of 65,000 available "tables". Some tables are
+reserved for LIVE users only, and some are for SYSOPS only. Tables
+1-10 are for NON-LIVE use. Depending on how the SYSOP has configured
+the EOP game, NON-LIVE users may or may not be able to enter the PUB,
+speak inside the PUB, use action commands, whisper, changes tables, etc.
+
+The PUB supports an unlimited number of action commands to be used. To
+use an action command, simply enter the action. For a full list of
+actions available, enter "/a" or "list".
+
+For a full list of commands available inside the PUB, enter '?' while
+in the PUB.
+} T Empire Help #8: Pub
+
+
+HLP09 {[[[35m|]
+EXITING
+[[[1;37m|]
+To leave Empire of the Peasants at any time, simply enter 'X'. Depending
+on your location, however, your moves may or may not be updated for
+the current turn (some places are advantageous to 'cheaters').
+} T Empire Help #9: Exiting
+
+
+HLP10 {[[[35m|]
+BATTLE
+[[[1;37m|]
+Empire of the Peasants supports two different methods of Battle. The
+methods available are ATTACK, and CONQUER.
+
+  RETREAT causes a player to "run" from battle; damage may or may
+not be caused to that player while retreating.
+
+  ATTACK will launch a full scale attack on the ground forces of
+the opponent. Soldiers (Hand to Hand combat) is performed. A winner
+of the battle is calculated in just a few moments after initiating
+the attack.
+
+  CONQUER will cause the ground forces of the aggressor to be sent
+to destroy parts of the opponents palace. For more information on
+how the palace comes into play, enter [[[33m|]HELP PALACE[[[37m|].
+
+A percentage of the opponents nobles and land will be awarded to the
+aggressor if a successful attack is launched. A loss of forces will
+occur if the attack fails!
+} T Empire Help #10: Battle
+
+
+HLP11 {[[[35m|]
+PURCHASES
+[[[1;37m|]
+The Empire of the Peasants (EOP) market houses all the great tools
+you will need to play EOP. To purchase a product, while at the
+market menu,  use the format 'Buy <quantity> <product>'.
+
+Examples include:
+
+buy 100 soldiers
+buy 200 markets
+buy 50 mills
+
+Product names can be abbreviated!
+} T Empire Help #11: Purchases
+
+
+HLP12 {[[[35m|]
+GROWTH
+[[[1;37m|]
+To grow in Empire of the Peasants (EOP) you must gain Markets
+and Mills. Mills provide you with Grain to feed your serfs and
+soldiers. Markets, Foundries, and shipyards provide you with money
+to help pay for your needs. Foundries and shipyards produce the
+best results, but are also the most expensive. Be sure to grow as
+quickly and steadily as possible or your opponents may get the
+best of you!
+
+It is a good idea to spend money on your defense (SOLDIERS and NOBLES)
+as often as possible. Failing to increase your defense will make you
+an easy win (or kill).
+
+You must keep a ratio of two serfs per acre of land, two mills per
+market, and one market per acre of land. If you fail to keep any
+of these ratios satisfied, it could result in the loss of your life!
+} T Empire Help #12: Growth
+
+
+HLP13 {[[[35m|]
+PROTECTION
+[[[1;37m|]
+To help stay alive as long as possible - invest in soldiers
+and nobles. You are permitted to own 20 soldiers per noble you
+own. Until you meet the ratio, you're not permitted to purchase
+more soldiers. The more soldiers you have: the better DEFENSE
+you have. When attacking other players, be sure to attack with
+as many soldiers as you can muster!
+
+If another player is able to defeat your forces, you will lose
+atleast ONE noble to your opponent. To help hinder your opponent,
+build up your PALACE. For more information, type [[[33m|]HELP PALACE[[[37m|].
+ } T Empire Help #13: Protection
+
+
+HLP14 {[[[35m|]
+TURNS
+[[[1;37m|]
+Every time you complete the cycle associated with the "C"ontinue
+option, you complete a turn. The more turns you complete; the tougher
+Empire of the Peasants (EOP) becomes. More grain will be required
+from you. The best approach is to complete as much as possible per
+turn. The less turns you complete, the easier your game will be to play!
+
+To achieve a higher rank, however, you must complete a required number
+of turns per rank. Type [[[33m|]HELP RANKS[[[37m|] for more information on rank
+requirements.
+} T Empire Help #14: Turns
+
+
+HLP15 {[[[35m|]
+PALACE
+[[[1;37m|]
+One of the best defenses for you is your PALACE. The more palace
+you own - the better off you are. If possible, keep your palace
+at 100%. Build your palace as quickly as possible in the initial
+stages of the game to achieve the best game results.
+} T Empire Help #15: Palace
+
+
+EMPHELP {[[[35m|]
+EMPIRE OF THE PEASANTS (EOP) 'HELP' INFORMATION:
+[[[1;37m|]
+Type [[[33m|]HELP[[[37m|] then one of the topics below (IE: [[[33m|]HELP GENERAL[[[37m|]):
+
+GENERAL       -    General information about EOP
+RANKS         -    Information about rank requirements
+STRATEGY      -    Strategic information
+NEWS          -    Information about EOP system news
+TAXES         -    Tax information
+OTHERS        -    Information you need to know about others
+PUB           -    Information about how to use the PUB
+EXITING       -    Exiting EOP Information
+BATTLE        -    Information about BATTLE commands
+PURCHASE      -    Information about the EOP Market Menu
+GROWTH        -    Information on how to make your empire grow
+PROTECTION    -    Defense Information
+TURNS         -    Information about how turns work
+PALACE        -    Information on what palace means to you!
+} T Empire list of all help files
+
+
+MSGMENU {[[[1;36m|]
+      <<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>
+      < Empire Message Express Center >
+      < ----------------------------- >
+      < -                           - >
+      < -     ([[[33m|]S[[[36m|])end a courier      - >
+      < -     ([[[33m|]L[[[36m|])eave a message     - >
+      < -     ([[[33m|]R[[[36m|])ead any messages   - >
+      < -                           - >
+      < ----------------------------- >
+       <<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>
+
+[[[36m|]Message option, or X[[[37m|]} T Empire message center menu
+
+
+MSGSHRT {
+[[[36m|]Please select (S,L,R,X, or ?)[[[37m|]} T Empire short message menu
+
+
+SENDWHO {
+[[[36m|]Which ruler shall receieve your message, or
+enter [[[32m|]ALL[[[36m|] to send to everyone[[[37m|]} T Empire send messager to who online
+
+
+SENDACC {
+[[[36m|]Which ruler shall you send the courier to[[[37m|]} T Empire send courier to who
+
+
+BADU {
+[[[31m|]The ruler name you entered is either not online,
+or is in another module. Try again later...[[[36m|]
+} T Empire userid entered for courier is invalid
+
+
+ENNMSG {[[[33m|]
+
+Enter the message to be sent (Up to 73 characters). Press
+[[[32m|]ENTER[[[33m|] to send the courier.
+
+~|-------------------------------------------------------------------------~|
+[[[36m|]} T Empire user entering message to courier
+
+
+OUTCOUR {
+[[[1;35m|]>>> Express Delivery from [[[33m|]%s[[[37m|]:
+[[[35m|]***[[[36m|] %s [[[35m|]***
+[[[37m|]} T Empire message sent to user
+
+
+COURSNT {
+[[[35m|]>>> Courier has been dispatched
+[[[36m|]} T Empire courier dispatched to send message
+
+
+LEAVEW {[[[33m|]
+OK, Sir! I will try and find a courier who will
+travel to the rulers land! No promises!
+[[[36m|]} T Empire sending a message via courier (stored)
+
+
+CHECKM {[[[32m|]
+One moment ... Yelling for the courier ...
+[[[36m|]} T Empire checking for any courier messages
+
+
+COURMSG {
+Sent from the empire of [[[33m|]%s[[[37m|]:
+
+>>> Dispatched message was received as follows:
+[[[32m|]
+%s
+[[[36m|]} T Empire message displayed from courier
+
+
+COURF {
+[[[35m|]>>> The courier failed to find any messages for you, SIR!
+[[[36m|]} T Empire courier failed to find any messages
+
+
+CANTMSG {
+Sorry, you must be a LIVE user in order to access
+the Message Center. To get more information on how
+to become a LIVE user, visit the information center.
+} T Empire User must be live to use message center
+
+
+CMSGWAIT {
+You have Courier Mail waiting in Empire of the Peasants!
+} T Empire logon notification of a courier message waiting
+
+
+COURWAIT {[[[33m|]
+You have Courier Mail waiting!  Select "R" to access it!
+[[[36m|]} T Empire user has courier mail waiting
+
+
+MSGALERT {
+[[[35m|]***
+[[[36m|]A courier just arrived from the [[[33m|]%s[[[36m|] Empire.  Check your messages!
+} T Empire courier message notification if user is online in ga
+
+
+STILMORE {[[[33m|]
+You still have more Courier Mail waiting! Select "R" to access it!
+[[[36m|]} T Empire user has more mail after reading a message
+
+
+DESC01 {
+Susie is a good looking girl as Barmaids go.  She has blonde hair and
+blue eyes.  She appears to be a happy girl.
+} T Empire barmaid description
+
+
+DESC02 {
+Jane is a sleezy looking Wench who would like nothing more to take you
+home!  She is always in trouble with the law so watch out!
+} T Empire wench description
+
+
+DESC03 {
+Bill is a tall strong Barman who serves up a might fine ale!
+} T Empire barman description
+
+
+DESC04 {
+Pirate Jack is a scarey looking gent, he wears a patch over his right eye.
+} T Empire pirate description
+
+
+SITAT {
+You are in the pub sitting at table %d.
+} T Empire Informing user which table sitting at
+
+
+INTPUB {[[[36m|]
+You see the following rulers in the pub: [[[1;37m|]} T Empire rulers currently in pub
+
+
+NOOTRU {[[[36m|]
+There are no other rulers sitting at your table now.
+} T Empire no other rulers at table at moment
+
+
+LOAYS {[[[36m|]
+Looking around the pub you see[[[37m|]} T Empire looking around the pub view
+
+
+THROWOT {
+[[[33m|]%s[[[36m|] just got tossed out of the pub for being rude!
+[[[37m|]} T Empire user thrown out of the pub for profanity
+
+
+FINBCA {
+[[[35m|]***
+[[[32m|]OK! That's it [[[33m|]%s[[[32m|]! You're outta here!
+[[[36m|]} T Empire Message to user concerning profanity
+
+EDITMNU {
+
+        Empire SYSOP user entrance/exit menu
+        ====================================
+        =  (1) Modify Entrance Message     =
+        =  (2) Modify Exit Message         =
+        =  (X) Edit to Pub                 =
+        ====================================
+
+Edit option} T Empire edit ent/exit menu
+
+CHAMNU {
+
+          Empire SYSOP action command menu
+        ====================================
+        =  (1) Modify Message to sender    =
+        =  (2) Modify Message to users     =
+        =  (3) Modify Owner of action      =
+        =  (X) Exit to Pub                 =
+        ====================================
+
+Action option} T Empire action command menu
+
+VICTORY {
+CONGRATS %s!   You have completed all TEN PHASES of
+EMPIRE OF THE PEASANTS!  You have shown you know
+what it means to be an ultimate ruler!
+
+As a result, the Council of Emperors has decided
+to grant you a few extra credits amounting to the
+grant sum of ** %d **  .. Feel free to play again!
+} T Empire user has completed game
+
+NEWPH {
+YIPEE!!  You have completed a phase in EMPIRE OF THE PEASANTS,
+%s.  You are now entering phase %d.  When you reach phase 10
+you will be the ultimate ruler!
+
+You are being moved to another empire to help make it
+grow larger!  You will receive a small amount of additional
+supplies from the Council of Emperors to help you on your way!
+
+Good Luck!
+} T Empire user has completed a phase
+

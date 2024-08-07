@@ -1,0 +1,6 @@
+; Filename: ELWEP_EXP.DEF
+LIBRARY ELWEP.DLL
+; *** Visual Studio 2019 EXPORT ALIASES ONLY ***
+; Empire of the Peasants - Copyright (c) 2023 Elwynor Technologies
+EXPORTS
+	_init__elwep=init__elwep	@1
